@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var topics = ["cold", "ice", "glacier", "penguin", "antarctica", "ice age", "polar bear", "balto", "canada", "snow", "frozen", "iceland"];
+	var topics = ["cold", "ice", "glacier", "penguin", "antarctica", "ice age", "polar bear", "balto", "canada", "snow", "frozen", "iceland", "black metal"];
 	
 	function renderButtons() {
 		$("#topics-display").empty();
