@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 		var topic = $(this).attr("data-topic");
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        topic + "&api_key=dc6zaTOxFJmzC&limit=10";
+        topic + "&rating=pg&api_key=dc6zaTOxFJmzC&limit=10";
 
         $.ajax({
         	url: queryURL,
