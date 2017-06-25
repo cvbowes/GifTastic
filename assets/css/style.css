@@ -1,0 +1,71 @@
+/*div {
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+*/
+body {
+	background: url(../images/bg.jpg) bottom right fixed;
+}
+.row {
+	text-align: center;
+}
+
+#sidebar {
+	position: fixed;
+	width: 20%;
+	top: 150px;
+	padding: 10px;
+	background: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+}
+
+form {
+	margin: 10px;
+}
+
+label, #user-search, #add-search {
+	margin: 0px auto 5px auto;
+}
+
+button {
+	margin: 5px;
+	font-size: 12px;
+}
+
+#add-search {
+	width: 100%;
+}
+
+#gifs-display {
+	background: rgba(255,255,255, 0.5);
+}
+
+.gif-div {
+	display: inline-block;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	background: rgba(255,255,255, 0.5);
+	border-radius: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+#sidebar {
+	position: relative;
+	width: 100%;
+	top: 0;
+}
+
+#gifs-display {
+	margin-top: 20px;
+}
+.gif-div {
+	display: block;
+	margin: 15px auto;
+}
+
+.gif {
+	max-width: 100%;
+}
+}

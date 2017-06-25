@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var topics = ["cold", "ice", "glacier", "penguin", "antarctica", "polar bear", "balto", "canada", "snow", "frozen"];
+	var topics = ["cold", "ice", "glacier", "penguin", "antarctica", "ice age", "polar bear", "balto", "canada", "snow", "frozen", "iceland"];
 	
 	function renderButtons() {
 		$("#topics-display").empty();
@@ -11,7 +11,7 @@ $(document).ready(function() {
 	}
 
 	function renderGifs() {
-		$("#gifs-display").empty();
+		$("#gifs-display").empty().css("padding", "10px");
 
 		var topic = $(this).attr("data-topic");
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -27,8 +27,8 @@ $(document).ready(function() {
         	var results = response.data;
 
         	for (var i = 0; i < results.length; i++) {
-        		var topicDiv = $("<div>");
-        		var rating = $("<p>").html("Rating: " + results[i].rating);
+        		var topicDiv = $("<div>").addClass("gif-div");
+        		var rating = $("<p>").html("Rating: " + results[i].rating.toUpperCase());
         		var still = results[i].images.fixed_height_still.url;
         		var animate = results[i].images.fixed_height.url;
         		//sets still image as initial source, saves still and animated URLs for laters
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 		var topic = $("#user-search").val().trim();
 
-		if (topics.indexOf(topic.toLowerCase()) === -1) {
+		if (topic != "" && topics.indexOf(topic.toLowerCase()) === -1) {
 			$("#user-search").val("");
 			topics.push(topic);
 			renderButtons();
