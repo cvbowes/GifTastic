@@ -1,10 +1,11 @@
-/*div {
+/*div, p{
 	box-sizing: border-box;
 	border: 1px solid black;
-}
-*/
+}*/
+
 body {
 	background: url(../images/bg.jpg) bottom right fixed;
+	font-family: 'News Cycle', sans-serif;
 }
 .row {
 	text-align: center;
@@ -17,10 +18,19 @@ body {
 	padding: 10px;
 	background: rgba(255,255,255, 0.5);
 	border-radius: 5px;
+	-o-transition: .5s;
+  	-ms-transition: .5s;
+  	-moz-transition: .5s;
+ 	-webkit-transition: .5s;
+  	transition: .5s;
+}
+
+#sidebar:hover {
+	background: rgba(255,255,255, 0.8);
 }
 
 form {
-	margin: 10px;
+	margin: 0 10px 10px 10px;
 }
 
 label, #user-search, #add-search {
@@ -36,20 +46,48 @@ button {
 #add-search {
 	width: 100%;
 	border-radius: 5px;
+	font-weight: 600;
+}
+
+button, #add-search {
+	background: #bdbbc9;
+	border: none;
+	letter-spacing: 2px;
+}
+
+button:hover, #add-search:hover, button:focus, #add-search:focus{
+	background: #696775;
+	color: #fff;
 }
 
 #gifs-display {
-	background: rgba(255,255,255, 0.5);
+	background: rgba(255,255,255, 0.2);
 }
 
 .gif-div {
 	display: inline-block;
 	margin: 10px;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	text-align: center;
 	background: rgba(255,255,255, 0.5);
 	border-radius: 5px;
+	-o-transition: .5s;
+  	-ms-transition: .5s;
+  	-moz-transition: .5s;
+ 	-webkit-transition: .5s;
+  	transition: .5s;
 
+}
+
+.gif-div:hover {
+	background: rgba(255,255,255, 0.9);
+}
+
+.gif-div p {
+	margin: 10px;
+	font-size: 12px;
+	color: #bdbbc9;
+	
 }
 
 @media screen and (max-width: 768px) {
@@ -62,9 +100,11 @@ button {
 #gifs-display {
 	margin-top: 20px;
 }
+
 .gif-div {
 	display: block;
 	margin: 15px auto;
+	padding-bottom: 5px;
 }
 
 .gif {
