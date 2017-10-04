@@ -10,10 +10,10 @@ This app uses the GIPHY API to make a dynamic web page that populates with gifs.
 2. For each string in the array, a button is appended to the `topics-display` in the HTML.
 
 3. When the user clicks on a button, an AJAX request to the GIPHY API retrieves the top 10 search results using the specified query.
-        *GIPHY parameters used:
-            -`q` (search query)
-            -`limit` ( =10 )
-            -`rating` ( PG )
+  *GIPHY parameters used:
+    *`q` (search query)
+    *`limit` ( =10 )
+    *`rating` ( PG )
 
 4. Search results will initially be displayed as a static image (`still` source URL provided by GIPHY API). When the user clicks one of the still GIPHY images, the gif's `src` attribute is replaced with the animated source URL. If the user clicks the gif again, it returns to its still state..
 
