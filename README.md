@@ -2,7 +2,6 @@
 
 ### Overview
 This app uses the GIPHY API to make a dynamic web page that populates with gifs.
-![GIPHY](Images/1-giphy.jpg)
 
 ### How It Works
 
